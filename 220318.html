@@ -5,13 +5,14 @@ git bash : git-hub와 프로젝트를 연동할때 사용하는 작은 command�
 
 Linux Command Shell : linux 운영체제에서 키보드로 명령을 입력하여 어떤 기능을 수행할때 사용하는 명령입력 창(window)
 
-깃헙 처음 연동
+깃헙 최초 연동
 git config --global user.name 
 git config --global user.email
 
 $ : prompt : 명령을 내리면(명령입력후enter) 수행할 준비가 되었다 라는 표식
 clear : 현재 화면의 메시지를 지우는 명령어
 
+repository 최초 등록
 github.com에 repository 생성
 git init : git local 저장소 설정(초기화,신청)
 git remote add...
@@ -22,7 +23,22 @@ git push -u origin master
 
 rm -rf .git : local repository 삭제(복구불가)
 
-최초 생성 이후 파일/폴더추가
+생성 이후 폴더 추가
 git add . 
 git commit -m "폴더명+ 폴더 생성"
 git push
+
+생성 이후 파일 추가
+git add .
+git commit -m "파일명+ 내용추가"
+git push
+
+깃헙 repository 다운로드
+git clone 깃헙주소 +변경하고자하는이름
+
+업로드 파일 동기화
+git pull
+
+깃헙 업로드 예외 설정
+$ touch .gitignore
+.gitignore 파일을 editor로 열기 업로드 예외 파일 리스트 작성 후 저장
